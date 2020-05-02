@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.6.1'
 gem 'bcrypt', '3.1.13'
 gem 'dotenv-rails'
+gem 'font-awesome-sass', '~> 5.4.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,3 +1,29 @@
-
-<p>仮TOPページ</p>
-<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>
+<div class="jumbotron">
+<h5>楽しさを知る   楽しさを教える   </h5>
+<h1>ぷらっとGolf</h1>
+</div>
+<div class="container">
+  <div class="main_wrapper">
+    <div class="main_content">
+    <h2>気軽にゴルフを学びたい人と教えたい人のマッチングサービス</h2>
+      <div class="lesson_link_wrapper">
+        <div class="row">
+          <div class="lesson_search_Box col-lg-6 btn_area">
+            <i class="fas fa-search fa-8x"></i> 
+            <p>握り方から教えて! 100を切りたい!</br>
+              近場でレッスンが開かれているかも!
+            </p>
+            <%= link_to "レッスンを探す", '#', class: 'btn btn-success' %>
+          </div>
+          <div class="lesson_create_Box col-lg-6 btn_area">
+            <%= image_tag "/images/teacher_icon.png" %>
+            <p>あなたのレッスンを待っている人がいるかも!</br>
+            気軽にティーチングを始めてみよう!
+            </p>
+            <%= link_to "レッスンを作成する", '#', class: 'btn btn-warning' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
