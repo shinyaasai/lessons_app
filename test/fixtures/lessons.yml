@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  practice_field: MyString
+  level: 1
+  price: 1
+  message: MyText
+
+two:
+  practice_field: MyString
+  level: 1
+  price: 1
+  message: MyText
