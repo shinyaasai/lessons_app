@@ -1,7 +1,14 @@
-<p>レッスン一覧</p>
-<% @lessons.each do |lesson| %>
-  <h1><%= lesson.title %></h1>
-  <h4><%= lesson.practice_field %></h3>
-  <p><%= lesson.target %></p>
-  <p><%= lesson.content %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @lessons.each do |lesson| %>
+      <div class="col-lg-4">
+        <div class="lesson_Box">
+          <h1><%= lesson.title %></h1>
+          <h4><%= lesson.practice_field %></h3>
+          <p><%= lesson.target %></p>
+          <p><%= lesson.content %></p>
+        </div>
+      </div> 
+    <% end %>
+  </div>
+</div>
