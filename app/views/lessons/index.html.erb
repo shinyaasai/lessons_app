@@ -1,1 +1,7 @@
 <p>レッスン一覧</p>
+<% @lessons.each do |lesson| %>
+  <h1><%= lesson.title %></h1>
+  <h4><%= lesson.practice_field %></h3>
+  <p><%= lesson.target %></p>
+  <p><%= lesson.content %></p>
+<% end %>

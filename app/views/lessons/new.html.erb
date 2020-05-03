@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form-group">
+    <%= form_with model:@lesson do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.label :タイトル %>
+      <%= f.text_field :title, class: "form-control" %>
+      <%= f.label :練習場所 %>
+      <%= f.text_field :practice_field, class: "form-control" %>
+      <%= f.label :こんな人を教えたい! %>
+      <%= f.text_area :target, class: "form-control"%>
+      <%= f.label :こんな内容です! %>
+      <%= f.text_area :content, class: "form-control"%>
+      <%= f.submit "登録", class: "btn btn-success"%>
+    <% end %>
+  </div>
+</div>
+
+<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
