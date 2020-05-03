@@ -13,8 +13,54 @@
  *= require_tree .
  *= require_self
  */
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 @import "bootstrap";
 @import "common";
 @import "users/devise";
 @import "users/edit";
+@import "pages";
 @import "layouts/navbar";
+.container {
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 12px;
+  color: #252525;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oxygen', sans-serif;
+  color: #252525;
+  margin-top: 0;
+}
