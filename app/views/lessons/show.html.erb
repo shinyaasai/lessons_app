@@ -1,1 +1,19 @@
-<h1>テスト</h1>
+<div class="container">
+  <div class="lesson_content">
+    <h1><%= @lesson.title %></h1>
+    <div class="font-weight-bold ">
+      <span>名前: <%= @lesson.user.name %><span>
+      <span>ゴルフ練習場: <%= @lesson.practice_field %><span>
+    </div>
+    <div class="lesson_detail">
+      <h2>＜こんな方が対象です＞</h2>
+      <p><%= @lesson.target %></p>
+      <h2>こんな内容です</h2>
+      <p><%= @lesson.content %></p>
+    </div>
+  </div>
+  <div class="message_Box">
+    <h3>↓料金などお問い合わせはこちら↓</h3>
+    <%= link_to "メッセージを送る", "#", class: "btn btn-success" %>
+  </div>
+</div>

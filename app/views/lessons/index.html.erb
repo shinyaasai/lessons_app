@@ -2,13 +2,17 @@
   <div class="row">
     <% @lessons.each do |lesson| %>
       <div class="col-lg-4">
-        <div class="lesson_Box">
-          <h1><%= lesson.title %></h1>
-          <h4><%= lesson.practice_field %></h3>
-          <p><%= lesson.target %></p>
-          <p><%= lesson.content %></p>
-        </div>
-      </div> 
+        <%= link_to lesson_path(lesson.id) do %>
+          <div class="lessons_Box">
+            <div class="user_image_Box">
+             <%= image_tag "/images/unnamed.jpg", alt: "ユーザー画像"%>
+            </div>
+            <p><%= lesson.title %></p>
+            <p><%= lesson.user.name %></p>
+            <h5><%= lesson.practice_field %></h5>
+          </div>
+        </div> 
+      <% end %>
     <% end %>
   </div>
 </div>

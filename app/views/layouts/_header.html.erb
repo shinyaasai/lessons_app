@@ -9,6 +9,9 @@
       <% if user_signed_in? %>
         <ul class="navbar-nav ml-md-auto align-items-center">
           <li>
+            <%= link_to "レッスン一覧", lessons_path %>
+          </li>
+          <li>
             <%= link_to "#{current_user.name}", user_path(current_user), class: "nav-link" %>
          </li>
          <li>

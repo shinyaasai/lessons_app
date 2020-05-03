@@ -20,6 +20,7 @@
 @import "users/devise";
 @import "users/edit";
 @import "pages";
+@import "lessons";
 @import "layouts/navbar";
 .container {
   width: 100%;
@@ -44,6 +45,7 @@
     width: 1170px;
   }
 }
+
 ul {
   margin: 0;
   padding: 0;
