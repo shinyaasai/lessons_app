@@ -5,4 +5,12 @@ class Lesson < ApplicationRecord
   validates :title, presence: true, length: { maximum: 30 }
   validates :target, presence: true, length: { maximum: 100 }
   validates :content, presence: true, length: { maximum: 500 }
+
+  def self.search(search)
+    if search
+      Lesson.where(['practice_field LIKE ?', "%#{search}%"])
+    else
+      Lesson.all.order(created_at: :desc)
+    end
+  end
 end
