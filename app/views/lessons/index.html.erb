@@ -1,4 +1,8 @@
 <div class="container">
+<%= form_tag lessons_path, method: "get" do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "検索", practice_field: nil %>
+<% end %>
   <div class="row">
     <% @lessons.each do |lesson| %>
       <div class="col-lg-4">
