@@ -4,13 +4,13 @@
       <%= render 'layouts/error_messages', object: f.object %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.label :タイトル %>
-      <%= f.text_field :title, class: "form-control" %>
+      <%= f.text_field :title, class: "form-control", id: "lesson_title" %>
       <%= f.label :練習場所 %>
-      <%= f.text_field :practice_field, class: "form-control" %>
+      <%= f.text_field :practice_field, class: "form-control", id: "lesson_practice_field" %>
       <%= f.label :こんな人を教えたい! %>
-      <%= f.text_area :target, class: "form-control"%>
+      <%= f.text_area :target, class: "form-control", id:"lesson_target"%>
       <%= f.label :こんな内容です! %>
-      <%= f.text_area :content, class: "form-control"%>
+      <%= f.text_area :content, class: "form-control", id: "lesson_content"%>
       <%= f.submit "登録", class: "btn btn-success"%>
     <% end %>
   </div>

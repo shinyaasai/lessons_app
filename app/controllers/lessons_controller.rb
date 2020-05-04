@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.order(created_at: :desc)
   end
 
   def new
@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     if @lesson.save
       flash.now[:notice] = "レッスンを作成しました"
-      redirect_to lesson
+      redirect_to @lesson
     else
       flash.now[:alert] = "レッスンの作成に失敗しました"
       render new_lesson_path
