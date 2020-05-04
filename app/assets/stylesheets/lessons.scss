@@ -20,7 +20,27 @@
     margin: 0;
   }
 }
-
+.search_form_wrapper{
+  h2{
+    color: #00fa9a;
+    text-shadow: 0 0.5px gray;
+  }
+  .jumbotron{
+    background-color: #FFF;
+    box-shadow: 0 0 4px gray;
+  }
+  #search{
+    margin-bottom: 20px;
+  }
+  .search_Box{
+    text-align: center;
+    font-size: 1.0rem;
+      input{
+       padding: 5px 50px;
+       background-color: #ffff7f;
+      }
+  }
+}
 .lesson_content{
   h1{
     color: #00fa9a;
