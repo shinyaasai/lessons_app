@@ -5,6 +5,7 @@ RSpec.describe Lesson, type: :model do
     lesson = build(:lesson)
     expect(lesson).to be_valid
   end
+
   it "空のタイトルは登録出来ないこと" do
     lesson = build(:lesson, title: nil)
     lesson.valid?
@@ -51,5 +52,17 @@ RSpec.describe Lesson, type: :model do
     lesson = build(:lesson, content: "a" * 501)
     lesson.valid?
     expect(lesson.errors[:content]).to include("は500文字以内で入力してください")
+  end
+
+  it "検索文字列と同じレッスンを返すこと" do
+    lesson1 = create(:lesson, practice_field: "新城ゴルフ場")
+    lesson2 = create(:lesson, practice_field: "豊川ゴルフ場")
+    expect(Lesson.search("新城ゴルフ場")).to include(lesson1)
+    expect(Lesson.search("新城ゴルフ場")).not_to include(lesson2)
+  end
+
+  it "検索が一致しなければ空のコレクションを返すこと" do
+    FatoryBot.create(:lesson, practice_field: "新城ゴルフ場")
+    expect(Lesson.search("豊川ゴルフ場")).to be_empty
   end
 end
