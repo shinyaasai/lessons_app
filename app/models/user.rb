@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true, length: { maximum: 10 }
+  has_many :lessons, dependent: :destroy
+
+  validates :name, presence: true, length: { maximum: 10 }, uniqueness: true
+
   # パスワード入力なしでもアカウント編集可
   def update_without_current_password(params, *options)
     params.delete(:current_password)

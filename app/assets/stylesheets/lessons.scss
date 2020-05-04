@@ -1,3 +1,49 @@
 // Place all the styles related to the lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.lessons_Box{
+  box-shadow: 0 0 8px gray;
+  margin-top: 20px;
+  .user_image_Box{
+    img{
+      height: 40%;
+      width: 100%;
+    }
+  }
+  p{
+    font-size: 1.0rem;
+    margin-bottom: 10px;
+  }
+  h5{
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.lesson_content{
+  h1{
+    color: #00fa9a;
+    text-align: center;
+  }
+  span{
+    display: block;
+    margin-bottom: 20px;
+   }
+  .lesson_detail{
+    margin-bottom: 60px;
+    h2{
+     color: #00fa9a;
+    }
+    p{
+      font-size: 1.0rem;
+    }
+  }
+}
+
+.message_Box{
+  h3{
+    margin-bottom: 15px;
+  }
+  text-align: center;
+}

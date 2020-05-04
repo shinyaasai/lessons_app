@@ -13,14 +13,14 @@
             <p>握り方から教えて! 100を切りたい!</br>
               近場でレッスンが開かれているかも!
             </p>
-            <%= link_to "レッスンを探す", '#', class: 'btn btn-success' %>
+            <%= link_to "レッスンを探す", lessons_path, class: 'btn btn-success' %>
           </div>
           <div class="lesson_create_Box col-lg-6 btn_area">
             <%= image_tag "/images/teacher_icon.png" %>
             <p>あなたのレッスンを待っている人がいるかも!</br>
             気軽にティーチングを始めてみよう!
             </p>
-            <%= link_to "レッスンを作成する", '#', class: 'btn btn-warning' %>
+            <%= link_to "レッスンを作成する", new_lesson_path, class: 'btn btn-warning' %>
           </div>
         </div>
       </div>

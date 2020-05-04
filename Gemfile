@@ -22,6 +22,9 @@ gem 'font-awesome-sass', '~> 5.4.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop-airbnb'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem 'spring-commands-rspec'
 end
 
 group :development do
@@ -33,6 +36,7 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem 'launchy'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
