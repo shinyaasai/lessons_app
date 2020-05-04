@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_124716) do
+ActiveRecord::Schema.define(version: 2020_05_04_055517) do
 
   create_table "lessons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "practice_field", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.string "title"
-    t.text "target"
-    t.text "content"
+    t.string "title", default: "", null: false
+    t.text "target", null: false
+    t.text "content", null: false
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 

@@ -8,13 +8,13 @@ class LessonsController < ApplicationController
   end
 
   def create
-    lesson = Lesson.new(lesson_params)
-    if lesson.save
+    @lesson = Lesson.new(lesson_params)
+    if @lesson.save
       flash[:notice] = "レッスンを作成しました"
       redirect_to lesson
     else
       flash[:alert] = "レッスンの作成に失敗しました"
-      redirect_to new_lesson_path
+      render new_lesson_path
     end
   end
 
